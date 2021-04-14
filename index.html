@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Portfolio Website</title><style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    </style>
+
+</head>
+<body class="text-white" style="font-family: Quicksand;scroll-behavior: smooth;" >
+
+    <div id="sidepane" class="overflow-auto md:hidden hidden flex flex-col justify-between w-5/6 h-screen fixed bg-gray-800">
+        <div>  
+            <div class="bg-gray-700 flex justify-between h-16">
+                <div class="flex flex-col justify-around px-4">
+                    <h1 class="text-2xl">MENU</h1>
+                </div>
+
+                <div id="toggle_button_off" class="py-4 px-12">
+                    <svg fill="white" class="h-full" viewBox="0 0 311 311.07733" xmlns="http://www.w3.org/2000/svg"><path d="m16.035156 311.078125c-4.097656 0-8.195312-1.558594-11.308594-4.695313-6.25-6.25-6.25-16.382812 0-22.632812l279.0625-279.0625c6.25-6.25 16.382813-6.25 22.632813 0s6.25 16.382812 0 22.636719l-279.058594 279.058593c-3.136719 3.117188-7.234375 4.695313-11.328125 4.695313zm0 0"/><path d="m295.117188 311.078125c-4.097657 0-8.191407-1.558594-11.308594-4.695313l-279.082032-279.058593c-6.25-6.253907-6.25-16.386719 0-22.636719s16.382813-6.25 22.636719 0l279.058594 279.0625c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.230469 4.695313-11.304687 4.695313zm0 0"/></svg>
+                </div>
+
+            </div>
+            <div class="flex flex-col m-2 text-2xl px-2">
+                <a  href="index.html">HOME</a>
+            </div>
+            <div class="flex flex-col m-2 text-2xl border-l-4 px-2 border-transparent">
+                <a  href="#part_1">ABOUT ME</a>
+            </div>
+            <div class="flex flex-col m-2 text-2xl border-l-4 px-2 border-transparent">
+                <a  href="#part_2">MY WORKS</a>
+            </div>
+            <div class="flex flex-col m-2 text-2xl border-l-4 px-2 border-transparent">
+                <a  href="#part_3">CONTACT ME</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-800 h-16 flex justify-between">
+        <div class="flex flex-col justify-around">
+            <h1 class="pl-4 text-2xl">VisionX</h1>
+        </div>
+
+        <div class="md:block hidden">
+            <div class="h-full flex">
+
+                <div class="h-full  px-4 flex flex-col justify-around">
+                    <a class="transition duration-300 hover:text-red-400" href="index.html">HOME</a>
+                </div>
+
+                <div class="h-full px-4 flex flex-col justify-around">
+                    <a class="transition duration-300 hover:text-red-400" href="#part_1">ABOUT ME</a>
+                </div>
+
+                <div class="h-full px-4 flex flex-col justify-around">
+                    <a class="transition duration-300 hover:text-red-400" href="#part_2">MY WORKS</a>
+                </div>
+
+                <div class="h-full px-4 flex flex-col justify-around">
+                    <a class="transition duration-300 hover:text-red-400"  href="#part_3">CONTACT ME</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="toggle_button_on" class="h-full md:hidden p-4">
+            <svg fill="white" class="h-full" viewBox="0 -53 384 384" xmlns="http://www.w3.org/2000/svg"><path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/></svg>
+        </div>
+    </div>
+
+    <script>
+        var toggle_on = document.getElementById("toggle_button_on");
+        var toggle_button_off = document.getElementById("toggle_button_off");
+        var sidepane = document.getElementById("sidepane");
+
+        toggle_on.addEventListener("click", function () {
+            sidepane.classList.remove("hidden");
+        });
+
+        toggle_button_off.addEventListener("click", function () {
+            sidepane.classList.add("hidden");
+        });
+
+    </script>
+
+    <div class="h-screen bg-gray-900 pl-8 flex flex-col justify-around">
+        <div class="bg-gray-600 border-l-8  pt-5 flex flex-col">
+            <h1 class="text-6xl ml-8">Hello! I'm Mayukh<br><span class="text-xl">I'll Build your next best website</span></h1>
+            <div class="flex-row mt-5 ml-8 justify-between">
+                <a class="bg-red-500 w-min p-4" href="#part_2">MY WORKS</a>
+                <a class="bg-red-500 w-min p-4" href="#part_3">CONTACT ME</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <section id="part_1" class="h-screen bg-gray-900 p-4 flex flex-col md:flex-row">
+        <div class="md:justify-around lg:bg-gray-900 md:flex md:flex-col p-4 h-min md:w-1/2 w-full">
+            <h1 class="text-6xl md:text-left text-center">ABOUT ME</h1>
+        </div><br><br>
+        <div class="bg-gray-800 border-0 p-4 h-min  w-full">
+            <div class="bg-gray-700 border-l-8 p-4 h-min  w-full">
+                <h1>I'm a full stack developer and currently started freelancing</h1>
+            </div><br>
+            <div class="bg-gray-700 p-4 h-min  w-full">
+                <h1>Programming Languages that I know</h1><br>
+                <div class="bg-gray-800 border-l-8 p-4 h-min  w-full">
+                    <h1>C++</h1>
+                </div>
+                <br>
+                <div class="bg-gray-800 border-l-8 p-4 h-min  w-full">
+                    <h1>Python</h1>
+                </div>
+                <br>
+                <div class="bg-gray-800 border-l-8 p-4 h-min  w-full">
+                    <h1>HTML, CSS and JS (ES6)</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="part_2" class="h-screen bg-gray-900 p-4 flex flex-col md:flex-row-reverse">
+        <div class="md:justify-around lg:bg-gray-900 md:flex md:flex-col p-4 h-min md:w-1/2 w-full">
+            <h1 class="text-6xl md:text-right text-center">MY WORKS</h1>
+        </div><br><br>
+        <div class="bg-gray-800 md:flex md:flex-col md:justify-around p-4 h-min w-full md:w-1/2">  
+            <h1 class="md:text-4xl text-center md:text-left">This is my first commercial website! Let your website be my first work in my portfolio!</h1>
+        </div>
+    </section>
+
+    <section id="part_3" class="h-screen bg-gray-900 justify-between flex flex-col">
+        <div class="p-4">
+            <h1 class="text-center text-6xl pt-8">My Contact</h1><br><br>
+            <div class="bg-gray-800 p-4 border-l-8">
+                Phone: +91 9831660532
+            </div><br>
+            <div class="bg-gray-800 p-4 border-l-8">
+                Email: kismotechindia@gmail.com
+            </div>
+        </div>
+
+        <div class="h-min p-8 bg-gray-800 w-full flex-col flex md:flex-row justify-between">
+            <div class="flex md:flex-row flex-col">
+                <h1 class="text-center md:text-left">Website Desinged by: Mayukh Chakraborty</h1>
+                <h1 class="text-center md:text-left">&emsp;Icons By: Flaticons.com</h1>
+            </div>
+
+            <h1 class="text-center md:text-left">VisionX Website Publishing</h1>
+        </div>    
+    </section>
+</body>
+</html>
